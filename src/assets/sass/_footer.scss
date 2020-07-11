@@ -1,0 +1,86 @@
+footer {
+    @extend .flex-col-center;
+    @media screen and (min-width: $md) {flex-direction: row;}
+    min-height: 100px;
+    margin-top: 800px; //temporário
+  
+    #left , #right {
+        @extend .flex-row-center;
+        position: relative !important;
+        width: 100%;
+        @media screen and (min-width: $md) {
+            height: 20px;
+            padding: 20px;
+        }
+    }
+
+    #left{
+        @media screen and (min-width: $md) {
+            justify-content: flex-start !important;
+        }
+
+        p{
+            font-size: .9em;
+            color: $dark;
+        }
+    }
+
+    #right{
+        @media screen and (min-width: $md) {
+            justify-content: flex-end !important;
+        }
+
+        & > ul{
+            @extend .flex-row-center;
+            flex-wrap: wrap !important;
+            position: relative !important;
+            list-style: none;
+
+            li{
+                @extend .flex-row-center;
+                margin: 5px 10px;
+                padding: 5px;
+
+                span{
+                    @extend .flex-row-center;
+                    padding: 2px;
+                    b{
+                        text-overflow: none;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        max-width: 17px;
+                    }
+                }
+
+                img{
+                    width: 20px;
+                    height: 15px;
+                    margin-right: 5px;
+                }
+
+                a,b{
+                    color: $dark;
+                    text-decoration: none;
+                    font-size: .9em;
+                    cursor: pointer;
+                }
+
+                #drowpcard {
+                    display: none;
+                    @extend .flex-col-center;
+                    align-items: flex-start;
+                    position: absolute;
+                    top: -120px;
+                    left: -40px;
+
+                    li{
+                        @extend .flex-row-center;                      
+                        img{
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

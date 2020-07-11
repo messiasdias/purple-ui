@@ -1,0 +1,27 @@
+.main {
+    @extend .flex-col-center;
+
+    .top{
+        //border: solid 1px red;
+        padding: 20px;
+        width: 100%;
+        *{
+            color:  $white;
+        }
+
+        h1 {
+            color: $white !important;
+            font-weight: 300;
+            font-size: 1.6em;
+        }
+
+        p{
+            font-size: .8em;
+            letter-spacing: .5px;
+        }
+
+      
+    }
+   
+    
+}

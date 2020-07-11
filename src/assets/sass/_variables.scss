@@ -1,0 +1,58 @@
+/* Fonts */
+//Roboto
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+//Nunito
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
+
+//Break-Points
+$sm: 380px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1480px;
+
+//Colors
+$primary: #ccc ;
+$secondary: #ddd ;
+$primary: #6e00ff;
+$secondary: #510fa8;
+$gradient: linear-gradient( to top, $primary 1%, $secondary ); 
+$light: #efefef ;
+$dark: #696969;
+$black: #000;
+$black2: rgba($black, .1);
+$white: #FFFFFF;
+$white2: rgba($white, .2);
+$success: #28a745;
+$error: #F85D5D;
+$info: #4799eb;
+$warning: #9e7700;
+
+$theme-colors: (
+  "success":    $success,  
+  "primary": $primary,
+  "danger": $error,
+  "light":  $light,
+  "dark":  $dark,
+  "warning": $warning,
+);  
+
+$color_map: 
+"default" $light $dark,
+"success" $success $white,
+"error" $error $white, 
+"warning" $warning $white, 
+"info" $info $white, 
+"primary" $primary $white; 
+
+
+$color_map_dark: 
+"default" $dark $white,
+"success"$dark $white,
+"error" $dark $white, 
+"warning" $dark $white, 
+"info" $dark $white, 
+"primary" $dark $white; 
+
+
+//Components
+$sidebarWidth: 300px;
