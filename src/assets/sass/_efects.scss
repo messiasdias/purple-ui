@@ -8,3 +8,48 @@
         opacity: 1;
     }
 }
+
+@keyframes submenushow {
+    0%{
+        transform: scale(.9);
+        opacity: 0;
+    }
+    100%{ 
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes iconmove {
+    0%{
+        transform: rotate(-5deg);
+    }
+    25%{ 
+        transform: rotate(0deg);
+    }
+
+    50%{ 
+        transform: rotate(5deg);
+    }
+
+    100%{ 
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes iconmove2 {
+    0%{
+        transform: translateY(5px);
+    }
+    25%{ 
+        transform: translateY(0px);
+    }
+
+    50%{ 
+        transform: translateY(5px);
+    }
+
+    100%{ 
+        transform: translateY(0px);
+    }
+}

@@ -1,0 +1,350 @@
+.menutoggle{
+    @extend .hide-on-lg;
+    font-size: 1.2em;
+    color: $white;
+    font-weight: lighter !important;
+    margin-left: 20px;
+}
+
+.menu {
+    user-select: none !important;
+    @extend .flex-row-center, .radius-left-bottom;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    display: none;
+
+    @media screen and (max-width: $lg) {
+        position: absolute;
+        @media screen and  (max-width: $sm) {
+            top: 161px;
+        }
+        top: 81px;
+        width: 100%;
+        margin: 0;
+        overflow: hidden;
+        flex-direction: column;
+        background:  $primary;
+        box-shadow: -1px 1px 2px $black2;
+        min-height: 400px; 
+        padding-bottom: 50px;  
+        z-index: 10;  
+    }
+
+    @media screen and (min-width: $lg) {
+        display: flex;;
+        flex-direction: row !important;
+        border-radius: 0 !important;
+        z-index: inherit !important;
+    }
+
+
+    & > li {
+        @extend .flex-col-center;
+        position: relative;
+        width: auto;
+        padding: 5px !important;
+
+        @media screen and  (max-width: $lg) {
+            margin: 0 5%;
+            margin: 10px;    
+        }
+
+        @media screen and  (min-width: $lg) {
+            position: relative !important;
+            flex-direction: row;
+            border-radius: none !important;
+        }
+    }
+
+    li {
+        padding: 6px;
+        @media screen and  (max-width: $lg) {
+            animation: menushow .2s ease-out;
+        }
+
+        & > a ,   & > svg,   & > i {
+            color: $white;
+            text-decoration: none;
+            font-size: 15px;
+            font-family: sans-serif;
+            font-weight: 500;
+        }
+
+        & >  a { 
+            @extend .flex-row-center;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            @media screen and  (max-width: $lg) {
+                margin: 0 2%;
+                justify-content: space-between;
+            }
+        };
+
+        & > svg, & > i{
+            margin-left: 10px;
+            @media screen and  (max-width: $lg - 1px) {
+                position: absolute;
+                right: 20px !important;
+                top: 20px;
+            }
+        }
+
+        &.separator {
+            @media screen and  (max-width: $lg) {
+                border-bottom: solid 1px $white2;
+                padding-bottom: 10px !important;
+            }
+        }
+
+    }
+
+
+    & > .dropdown-menu {
+       
+        @media screen and (min-width: $lg) {
+            flex-direction: row;
+        }
+
+        &  > ul.dropdown-submenu  {
+            
+            @media screen and (min-width: $lg) {
+                display: flex ;
+                position: absolute !important;
+                background-color: $white;
+                border-radius: 5px;
+                box-shadow: 4px 4px 5px $black2, -5px -5px 10px $black2;
+                top: 80px;
+                left: 20px;
+                z-index: 10 !important;
+                min-width: 300px;
+                max-width: 350px;
+                transition-delay: .5s;
+                transition: submenushow ease-in-out .8s;
+                display: none;
+
+
+                & > li {
+                    z-index: 6 !important;
+                    padding: 5px !important;
+
+                    a, svg, i{
+                        color: $dark;
+                    }
+                }
+
+            } 
+            
+            &::before{
+                @media screen and  (min-width: $lg) { 
+                    content: '';
+                    position: absolute;
+                    width: 30px;
+                    height: 30px;
+                    left: 30px;
+                    top: -2px;
+                    background-color: white;
+                    transform: rotate(135deg);
+                    z-index:  -1 !important;
+                }
+            }
+            
+        } 
+
+
+        .dropdown-submenu {
+            display: none;
+            position: relative;
+            width: 100% !important;
+            padding: 0 !important;
+            
+            @media screen and  (min-width: $lg) { 
+                background-color: $white;
+                position: absolute !important;
+                flex-direction: column;
+                right: calc(-98% );
+                top: 20px;
+                border-radius: 5px;
+                box-shadow: 4px 4px 5px $black2, -5px -5px 10px $black2;
+                animation: submenushow ease-in-out .1s !important;
+            }
+
+            &::before {
+                @media screen and  (min-width: $lg) { 
+                    content: '';
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    left: -5px;
+                    top:  6px;
+                    background: $white;
+                    transform: rotate(135deg);
+                    z-index:  -1 !important;
+                }
+            }
+
+
+            &  > li {
+                @extend .flex-col-center;
+                position: relative !important;
+                align-items: flex-start;
+                width:  100% !important;
+                padding: 0 !important;
+                z-index:1 ;
+            
+                & > a {  
+                    width: 100%;
+                    margin: 0;
+                }
+
+                & > ul{display: none;}
+
+                .icon-group {
+                    @extend .card;
+                    position: relative !important;
+                    width: 100%;
+                    padding: 0 !important;
+                    z-index: 2 !important;
+
+                    @media screen and (min-width: $lg) {
+                        display: flex !important;
+                        flex-direction: column;
+                        box-shadow: none;
+                    }
+
+                    & >  span {
+                        position: relative;
+                        min-width:  220px!important;
+                        min-height: 40px !important;
+                        margin: 0 !important;
+                        padding: 0 !important;
+
+                        & >  a { 
+                            @extend .flex-row-center;
+                            @media screen and (max-width: $lg) { justify-content: flex-start;}
+                            width:  100% !important;
+                            align-self: flex-start;
+                            flex-direction: row !important;
+                            padding: 15px;
+                            transition: transform ease-in .1s;
+                            border: solid 1px transparent;
+                         
+                            & >  div{
+                                @extend .flex-col-center;
+                                align-items: flex-start !important;
+                                
+                                b, small{
+                                    color:  $dark;
+                                    
+                                    @media screen and  (max-width: $sm) {
+                                        text-overflow: ellipsis;
+                                        overflow: hidden;
+                                        white-space: nowrap;
+                                        max-width: 40%;
+                                    }
+                                }
+
+                                b{ font-size: 14px;}
+                                
+                                small{
+                                    font-size: 14px;
+                                }
+                            }
+
+                            img, svg, i{
+                                height: 50px;
+                                width: 50px;
+                                margin-right: 20px;
+                                color: $primary;
+                                font-size: 50px;
+                                animation: iconmove ease-in-out .6s ;
+                            }
+
+                            &:hover{
+                                & {
+                                    border-radius: 5px;
+
+                                    svg, i{
+                                        animation-delay: .3s;
+                                        animation: iconmove2 ease-in-out .6s !important;
+                                    }
+
+                                    @media screen and  (max-width: $lg) {
+                                        background-color: rgba($light, .5);
+                                        &:first-child{
+                                            border-bottom-color: $light;
+                                        }
+                                    }
+                                    @media screen and  (min-width: $lg) {
+                                        box-shadow: 4px 4px 5px $black2, -5px -5px 10px $black2;
+                                        transform: scale(1.12);
+                                        background-color: $white;
+                                        border-radius: 5px;
+                                        transition: transform cubic-bezier(0.6, -0.28, 0.7, 0.045) .3s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }  
+            }
+            
+        }
+
+
+        .dropdown-submenu2 {
+            position: relative !important;
+            width: 100% inherit;
+            @extend .flex-row-center;
+            display: flex !important;
+            padding: 0 !important;
+            border-top: solid 1px $black2;
+            background-color: transparent;
+            overflow: hidden;
+
+            @media screen and (max-width: $lg) {
+                flex-direction: column;
+            }
+
+            @media screen and (min-width: $lg) {
+                flex-wrap: wrap !important;
+                flex-direction: row;
+            }
+            
+            &  > li {
+                @extend .flex-row-center;
+                position: relative;
+                width: 100%;
+                width: 50% !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                @media screen and  (max-width: $lg) {
+                    min-width: 250px;
+                }
+
+                &  > a {
+                    width: 100%;
+                    display: flex;
+                  
+
+                    @media screen and  (max-width: $lg) {
+                        min-width: 250px;
+                    }
+
+                    @media screen and  (min-width: $lg) {
+                        padding: 10px !important;
+                        text-align: center !important;
+                        justify-content:  center;
+                    }
+                }
+
+               
+            }
+        }
+
+    }
+
+
+}

@@ -8,11 +8,13 @@ var breakpoints = {
 }
 
 $(document).ready(()=> {
-
-    init()
     
     $(this).click((event) => {
         if($('#drowpcard').css('display') === 'block') $('#drowpcard').hide();
+        if( event.target.parentElement.nodeName.toLowerCase() !== 'li' && (dropdown_menu !== null | dropdown_submenu !== null) ){
+            dropdown_menu_active() 
+            dropdown_submenu_active()
+        }
     })
 
     $('.menutoggle').click((event) => {
@@ -28,14 +30,12 @@ $(document).ready(()=> {
         dropdown_submenu_active(event.target.parentElement)
     })
 
-    
-
+    init()
 } )
 
 
 $(document).resize( () =>{
     init()
-    console.log('resize')
 })
 
 
@@ -44,7 +44,8 @@ $(document).resize( () =>{
 function init(){
     dropdown_menu_setHash()
     dropdown_submenu_setHash()
-    menu_active_indicator()
+    dropdown_menu_active() 
+    dropdown_submenu_active()
     
     if($(document).width() >= breakpoints.lg ){
         $('.menu').show()
@@ -52,6 +53,12 @@ function init(){
         $('.menu').hide()
     }
 
+}
+
+function show(el){
+    setTimeout(() =>{
+        $(el).show()
+    },100)
 }
 
 
@@ -182,11 +189,23 @@ function menu_active_indicator(children=null, active=false)
         }
     }
 
-    if($(document).width() >= breakpoints.lg) {
-        $('li.dropdown-menu>svg.fa-angle-right').filter( svg =>{
+    if($(document).width() < breakpoints.lg) {
+        $('li.dropdown-menu>svg.fa-angle-down').filter( svg =>{
             let icon = $('li.dropdown-menu>svg.fa-angle-right')[svg]
             $(icon).removeClass('fa-angle-right')
             $(icon).addClass('fa-angle-down')
+        })
+    }
+}
+
+
+function menu_reset_indicator(){
+    if($(document).width() < breakpoints.lg) {
+        $('.fa-angle-down').filter( svg =>{
+            let icon = $('.fa-angle-down')[svg]
+            console.log(icon)
+            $(icon).removeClass('fa-angle-down')
+            $(icon).addClass('fa-angle-right')
         })
     }
 }
