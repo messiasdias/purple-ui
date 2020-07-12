@@ -1,9 +1,20 @@
 <template>
   <div id="app">
-      <Header />
-      <Sidebar />
-      <Home />
-      <Footer />
+    <!-- main -->
+    <div class="row"> 
+        
+        <Sidebar  class="col col-3 hide-under-lg" />
+        
+        <div class="col col-12 col-lg-9"> 
+           <Header />
+            <Home />
+        </div>
+
+    </div>
+    <!-- ./main -->
+
+    <!-- footer -->
+    <Footer />
   </div>
 </template>
 

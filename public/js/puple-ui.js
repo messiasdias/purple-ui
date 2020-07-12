@@ -34,7 +34,7 @@ $(document).ready(()=> {
 } )
 
 
-$(document).resize( () =>{
+$(window).resize( () =>{
     init()
 })
 
@@ -52,7 +52,6 @@ function init(){
     }else{
         $('.menu').hide()
     }
-
 }
 
 function show(el){
