@@ -1,0 +1,53 @@
+
+$btn:
+default $light $dark,
+success $success $light,
+error $error $light,
+info $info $light,
+warning $warning $light;
+
+.btn {
+    @extend .flex-row-center, .shadow;
+    padding: 8px 20px;
+    border-radius: 50px;
+    color: $dark;
+    font-size: .9em;
+    min-width: 120px;
+    @media screen and (max-width: $lg) { max-width: 50%;}
+    text-align: center !important;
+    font-weight: normal;
+    background: #ccc;
+    transition-delay: .1s;
+    transition: ease-in-out transform .1s;
+    font-weight: 600;
+
+    & > svg , & > i {
+        color: $dark;
+        font-size: .8em;
+        margin-right: 5px;
+    }
+
+    &:hover{
+        cursor: pointer;
+        background: rgba(#ccc, .99);
+        transform: translateY(-2px);
+        transition: all ease-in-out .1s;
+    }
+
+    @each $name , $bg, $cl in $btn {
+        &-#{$name} {
+            @extend .btn;
+            background: $bg !important;
+            color: $cl !important;
+
+            & > svg , & > i {
+                color: $cl !important;
+            }
+
+            &:hover{
+                background: rgba($bg, .9) !important;
+            }
+        }        
+    }
+
+}

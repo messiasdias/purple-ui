@@ -61,7 +61,7 @@
     li {
         padding: 6px;
         @media screen and  (max-width: $lg) {
-            animation: menushow .2s ease-out;
+            animation: toLeft.2s ease-out;
         }
 
         & > a ,   & > svg,   & > i {
@@ -123,7 +123,7 @@
                 min-width: 300px;
                 max-width: 350px;
                 transition-delay: .5s;
-                transition: submenushow ease-in-out .8s;
+                transition: scalingease-in-out .8s;
                 display: none;
 
 
@@ -169,7 +169,7 @@
                 top: 20px;
                 border-radius: 5px;
                 box-shadow: 4px 4px 5px $black2, -5px -5px 10px $black2;
-                animation: submenushow ease-in-out .1s !important;
+                animation: scalingease-in-out .1s !important;
             }
 
             &::before {
@@ -260,7 +260,7 @@
                                 margin-right: 20px;
                                 color: $primary;
                                 font-size: 50px;
-                                animation: iconmove ease-in-out .6s ;
+                                animation: moving ease-in-out .6s ;
                             }
 
                             &:hover{
@@ -269,7 +269,7 @@
 
                                     svg, i{
                                         animation-delay: .3s;
-                                        animation: iconmove2 ease-in-out .6s !important;
+                                        animation: jump ease-in-out .6s !important;
                                     }
 
                                     @media screen and  (max-width: $lg) {

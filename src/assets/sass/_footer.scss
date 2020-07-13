@@ -1,8 +1,7 @@
 footer {
-    @extend .flex-col-center;
+    @extend .flex-col-center, .col-12;
     @media screen and (min-width: $md) {flex-direction: row;}
     min-height: 100px;
-    margin-top: 800px; //temporário
   
     #left , #right {
         @extend .flex-row-center;

@@ -1,3 +1,5 @@
+@import "_btn";
+
 .shadow{
     box-shadow:  4px 4px 5px $black2, -5px -5px 10px $black2;
 }
@@ -74,4 +76,33 @@
 
 .radius-left-bottom {
     border-radius: 0px 0px 0px 50px ;
+}
+
+
+$tag:
+default $light $dark,
+success $success $light,
+error $error $light,
+info $info $light,
+warning $warning $light;
+
+.tag {
+    @extend .flex-row-center;
+    animation: jump ease-in-out .6s;
+    box-sizing: border-box !important;
+    width: 20px;
+    height: 20px;
+    padding: 4px;
+    border-radius: 100% !important;
+    font-size: 12px !important;
+    background: $light ;
+    color: $dark;
+
+    @each $name, $bg, $cl in $tag {
+        &-#{$name}{
+            @extend .tag;
+            background: $bg !important;
+            color: $cl !important;
+        }
+    }
 }
