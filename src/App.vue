@@ -1,10 +1,15 @@
 <template>
-  <div id="app">
-      <Header />
-      <Sidebar />
-      <Home />
-      <Footer />
-  </div>
+  <main class="app" id="app">
+    <Sidebar/>
+    <!-- main -->    
+    <section class="col main"> 
+        <Header />
+        <Home />
+    </section>
+    <!-- ./main -->
+    <!-- footer -->
+    <Footer />
+  </main>
 </template>
 
 <script>

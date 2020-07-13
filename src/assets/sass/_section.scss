@@ -1,0 +1,47 @@
+.section {
+    @extend .flex-col-center;
+    justify-content: flex-start !important;
+    min-height: 500px;
+    
+
+    .top{
+        padding: 20px;
+        width: 100%;
+        background-color: $primary;
+
+        *{
+            color:  $white;
+        }
+
+        h1 {
+            color: $white !important;
+            font-weight: 300;
+            font-size: 1.6em;
+        }
+
+        p{
+            font-size: .8em;
+            letter-spacing: .5px;
+        }
+    }
+
+    .row {
+        padding: 0 !important;
+
+        & > div[class^=col-] {
+            margin:  0 !important;
+            padding: 0 !important;
+
+            & > .card {
+                margin: 10px;
+                min-height: 200px !important;
+                padding: 0 ;
+                border: solid 1px rgba($primary, .1);
+                background-color: $light !important;
+            }
+        }
+    }
+   
+
+    
+}
