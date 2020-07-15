@@ -2,7 +2,6 @@ import $ from 'jquery'
 
 var dropdown_menu = null 
 var dropdown_submenu = null
-var sidebar_show = false
 
 var breakpoints = {
     sm: 576,
