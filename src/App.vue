@@ -1,6 +1,6 @@
 <template>
   <main class="app" id="app">
-    <Sidebar/>
+    <Sidebar :description="description" />
     <!-- main -->    
     <section class="col main"> 
         <Header />
@@ -8,7 +8,7 @@
     </section>
     <!-- ./main -->
     <!-- footer -->
-    <Footer />
+    <Footer :description="description" />
   </main>
 </template>
 
@@ -19,6 +19,12 @@ import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
+  props:{
+    description: {
+          type: String,
+          default: 'PurpleUI'
+    }
+  },
   components: {
     Header,
     Sidebar,

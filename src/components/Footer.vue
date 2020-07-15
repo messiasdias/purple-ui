@@ -1,12 +1,12 @@
 <template>
 <footer>
     <div id="left">
-        <p>&copy; 2020 <b>PurpleUI</b> All right reserved.</p>
+        <p>&copy; 2020 <b>{{description}}</b> All right reserved.</p>
     </div>
     <div id="right">
         <ul>
             <li>
-                <span  onclick="show('#drowpcard')" ><img src="https://preview.webpixels.io/purpose-application-ui-kit/assets/img/icons/flags/ro.svg" alt=""> <b>Romeno</b> </span>
+                <span onclick="show('#drowpcard')" ><img src="https://preview.webpixels.io/purpose-application-ui-kit/assets/img/icons/flags/ro.svg" alt=""> <b>Romeno</b> </span>
 
                  <ul id="drowpcard" class="card modal" >
                      <li> <img src="https://preview.webpixels.io/purpose-application-ui-kit/assets/img/icons/flags/es.svg" /> <a href="#">Spanish</a></li>
@@ -26,5 +26,11 @@
 <script>
 export default {
     name: 'Footer',
+    props:{
+        description: {
+            type: String,
+            default: 'PurpleUI'
+        }
+    }
 }
 </script>
