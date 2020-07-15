@@ -4,7 +4,7 @@
     <!-- main -->    
     <section class="col main"> 
         <Header />
-        <Home />
+        <router-view />
     </section>
     <!-- ./main -->
     <!-- footer -->
@@ -14,7 +14,6 @@
 
 <script>
 import Header from './components/Header.vue'
-import Home from './components/Home.vue'
 import Sidebar from './components/Sidebar.vue'
 import Footer from './components/Footer.vue'
 
@@ -23,7 +22,6 @@ export default {
   components: {
     Header,
     Sidebar,
-    Home,
     Footer
   }
 }

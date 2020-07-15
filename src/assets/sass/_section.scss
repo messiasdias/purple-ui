@@ -38,6 +38,7 @@
                 padding: 0 ;
                 border: solid 1px rgba($primary, .1);
                 background-color: $light !important;
+                animation: scaling ease-in-out .3s;
             }
         }
     }

@@ -8,7 +8,7 @@
 
     <div id="right">
         <ul>
-            <li><a class="sidebartoggle" href="#"><i class="fas fa-ellipsis-h"></i></a></li>
+            <li><a class="sidebartoggle" href="#"><i class="fas fa-stream"></i></a></li>
             <li><a href="#"><i class="fas fa-search"></i></a></li>
             <li class="hide-under-lg"><a href="#"><i class="far fa-comment-alt"></i></a></li>
             <li><a href="#"><i class="far fa-bell"></i></a></li>

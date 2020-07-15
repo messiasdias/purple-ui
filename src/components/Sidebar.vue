@@ -24,25 +24,24 @@
   </div>
 
   <div class="sidebar-menu">
-     
       <ul>
-            <li><a class="active" href="http://"> <i class="fa fa-home"> </i>  <b>Home</b> </a></li>
-            <li><a href="#"> <i class="fas fa-project-diagram"></i>  <b>Projects</b> </a></li>
-            <li><a href="#"> <i class="fas fa-tasks"></i>  <b>Tasks</b> </a></li>
-            <li><a href="#"> <i class="fas fa-columns"></i>  <b>Kanban</b> </a></li>
-            <li><a href="#"> <i class="fa fa-users-cog"> </i>  <b>Users</b> </a></li>
-            <li><a href="#"> <i class="fas fa-user-ninja"> </i>  <b>Profile</b> </a></li>
-            <li><a href="#"> <i class="fas fa-receipt"> </i>  <b>Invoices</b> </a></li>
-            <li><a href="#"> <i class="fa fa-cogs"> </i>  <b>Widgets</b> </a></li>
+            <li><a v-bind:class="{'active': $route.path === '/' }" href="/"> <i class="fa fa-home"> </i>  <b>Home</b> </a></li>
+            <li><a v-bind:class="{'active': $route.path === '/projects' }" href="/projects"> <i class="fas fa-project-diagram"></i>  <b>Projects</b> </a></li>
+            <li><a v-bind:class="{'active': $route.path === '/tasks' }" href="/tasks"> <i class="fas fa-tasks"></i>  <b>Tasks</b> </a></li>
+            <li><a v-bind:class="{'active': $route.path === '/kanban' }" href="/kanban"> <i class="fas fa-columns"></i>  <b>Kanban</b> </a></li>
+            <li><a v-bind:class="{'active': $route.path === '/users' }" href="/users"> <i class="fa fa-users-cog"> </i>  <b>Users</b> </a></li>
+            <li><a v-bind:class="{'active': $route.path === '/profile' }" href="/profile"> <i class="fas fa-user-ninja"> </i>  <b>Profile</b> </a></li>
+            <li><a v-bind:class="{'active': $route.path === '/invoices' }" href="/invoices"> <i class="fas fa-receipt"> </i>  <b>Invoices</b> </a></li>
+            <li><a v-bind:class="{'active': $route.path === '/widgets' }" href="/widgets"> <i class="fa fa-cogs"> </i>  <b>Widgets</b> </a></li>
       </ul>
 
   </div>
 
 
    <div class="card">
-            <h2>Hello, Friend!</h2>
-            <p>Why not start using Purpose Application UI Kit and create something amazing today?</p>
-            <a  class="btn-default" href="#">Get Started</a>
+        <h2>Hello, Friend!</h2>
+        <p>Why not start using Purpose Application UI Kit and create something amazing today?</p>
+        <a class="btn-default" href="#">Get Started</a>
     </div>
 
 
