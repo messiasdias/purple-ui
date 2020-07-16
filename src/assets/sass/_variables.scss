@@ -36,22 +36,24 @@ $theme-colors: (
   "warning": $warning,
 );  
 
+// @each $name , $bg, $cl in $color_map {}
 $color_map: 
-"default" $light $dark,
-"success" $success $white,
-"error" $error $white, 
-"warning" $warning $white, 
-"info" $info $white, 
-"primary" $primary $white; 
-
+default $light $dark,
+success $success $light,
+error $error $light, 
+warning $warning $light, 
+info $info $light, 
+primary $primary $light,
+secondary $secondary $light; 
 
 $color_map_dark: 
-"default" $dark $white,
-"success"$dark $white,
-"error" $dark $white, 
-"warning" $dark $white, 
-"info" $dark $white, 
-"primary" $dark $white; 
+default #eee $dark,
+success$dark $light,
+error $dark $light, 
+warning $dark $light, 
+info $dark $light, 
+primary $dark $light,
+secondary rgba($dark, .9) $light; 
 
 
 //Components

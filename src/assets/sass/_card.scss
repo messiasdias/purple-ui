@@ -1,0 +1,139 @@
+.card {
+    @extend .shadow-radius;
+    padding: 10px;
+    background-color: $white !important;
+    min-width: 150px;
+    position: relative;
+    overflow: hidden;
+    padding: 0 ;
+    margin: 10px;
+    min-height: 200px !important;
+    background-color: $light !important;
+
+    .actions {
+        @extend .flex-row-center;
+        padding: 5px;
+        a{
+            @extend .flex-row-center;
+            color: $dark;
+            font-size: 14px;
+            font-weight: lighter !important;
+            margin: auto 10px ;
+
+            &:hover{
+                transform: translateY(-2px);
+            }
+        }
+
+        @each $name , $color, $cl in $color_map {
+            a.#{name}{
+                &  > svg, & {
+                    color: $color !important;
+                }
+            }
+        }
+        
+    }
+
+    &-header,  &-body,  &-footer {
+        position: relative;
+        width: 100%;
+        padding: 10px;
+        background-color: $white;
+        color: $dark ;
+    }
+
+    &-header {
+       @extend .flex-row-center;
+       border-bottom: solid 1px $black2;
+       justify-content: space-between !important;
+       padding: 20px;
+    }
+
+    &-body {
+        @extend .flex-col-center;
+        min-height: 80px;
+        padding: 28px 10px;
+    }
+
+
+    &-footer {
+        @extend .flex-col-center;
+        border-top: solid 1px $black2; 
+        padding: 10px 0px !important;
+    }
+
+    &:hover{
+       @extend .shadow-reverse;
+    }
+
+
+
+    &.projects {
+        .card-header{
+            border-color: transparent;
+        }
+    
+        .card-body{
+            img[class=avatar-lg], small, & > .actions {
+                margin-bottom: 10px!important;
+            }
+            & .actions{
+    
+                a { margin:  2px !important;}
+    
+                &:hover{
+    
+                    a{transform: none;}
+    
+                    & > a:first-child{
+                        transform: translateX(-10px);
+                        transition: transform ease-in-out  .3s;
+                    }
+    
+                    & > a:last-child{
+                        transform: translateX(10px);
+                        transition: transform ease-in-out  .3s;
+                    }
+                }
+            } 
+        }
+    
+        .card-footer {
+            .actions {
+                width: 100%;
+                height: 100%;
+                padding: 10px;
+                justify-content: space-evenly !important;
+                a{font-size: 16px;}
+            }
+        }
+    
+    }
+    
+    
+    &.tasks {
+        position: relative;
+        width: 100% !important;
+        .card-header{
+            border-color: $black2;
+        }
+
+        .card-body {
+            @extend .flex-col-center;
+            justify-content: flex-start !important;
+        }
+    
+        .card-footer{
+            border-color: transparent;
+        }
+    }
+
+}
+
+
+.card2 {
+    border: solid 1px $black2;
+    border-radius: 10px;
+    min-height: 80px;
+}

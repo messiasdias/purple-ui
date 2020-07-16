@@ -1,7 +1,14 @@
 @import "_btn";
+@import "./_card.scss";
 
-.shadow{
-    box-shadow:  4px 4px 5px $black2, -5px -5px 10px $black2;
+
+.shadow {
+    box-shadow: 2px 2px 15px  rgba( $black , .1), -2px 12px 15px rgba($black,.05);
+}
+
+
+.shadow-reverse {
+    box-shadow: 2px 2px 15px  rgba( $black , .2), -2px 12px 15px rgba($black,.1);
 }
 
 .shadow-radius{
@@ -9,35 +16,42 @@
       border-radius: 5px;
 }
 
-.card {
-    @extend .shadow-radius;
-    padding: 10px;
-    background: $white !important;
-    min-width: 120px;
-}
-
 .circle{
     border-radius: 100%;
+}
+
+.center{
+    align-self: center !important;
+    text-align: center !important;
 }
 
 .flex {
     display: flex;
 }
 
+.flex-col {
+    @extend .flex;
+    flex-direction: column;
+}
+
+.flex-row{
+    @extend .flex;
+    flex-direction: row;
+}
+
 .flex-center{
     @extend .flex;
     justify-content: center;
     align-items: center;
+    align-content: stretch;
 }
 
 .flex-col-center{
-    @extend .flex-center;
-    flex-direction: column;
+    @extend .flex-center, .flex-col;
 }
 
 .flex-row-center{
-    @extend .flex-center;
-    flex-direction: row;
+    @extend .flex-center, .flex-row;
 }
 
 
@@ -79,13 +93,6 @@
 }
 
 
-$tag:
-default $light $dark,
-success $success $light,
-error $error $light,
-info $info $light,
-warning $warning $light;
-
 .tag {
     @extend .flex-row-center;
     animation: jump ease-in-out .6s;
@@ -98,7 +105,7 @@ warning $warning $light;
     background: $light ;
     color: $dark;
 
-    @each $name, $bg, $cl in $tag {
+    @each $name, $bg, $cl in $color_map {
         &-#{$name}{
             @extend .tag;
             background: $bg !important;
@@ -106,3 +113,91 @@ warning $warning $light;
         }
     }
 }
+
+.badge {
+    @extend .tag;
+    animation: scalling ease-in-out .6s !important;
+    width: 80px;
+    padding: 14px 20px;
+    border-radius: 50px!important;
+    font-size: 13px ;
+    font-weight: bolder;
+
+    @each $name, $bg, $cl in $color_map {
+        &-#{$name}{
+            @extend .badge;
+            background: $bg !important;
+            color: $cl !important;
+        }
+    }
+}
+
+.badge-sm {
+    @extend .badge ;
+    font-size: .6rem !important;
+    padding: 3px 6px  !important;
+    width: auto !important;
+    @each $name, $bg, $cl in $color_map {
+        &-#{$name}{
+            @extend .badge-#{$name}, .badge-sm;
+        }
+    }
+}
+
+
+.avatar {
+    @extend .circle;
+    width: 40px;
+    height: 40px;
+
+    &-sm {
+        @extend .avatar;
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    &-lg {
+        @extend .avatar;
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    &-xl {
+        @extend .avatar;
+        width: 120px !important;
+        height: 120px !important;
+    }
+}
+
+.tx {
+    color:  $dark;
+    @each $name, $bg, $cl in $color_map {
+        &-#{$name}{
+            @extend .tx;
+            color: $bg !important;
+        }
+    }
+}
+
+.bg, .bg-white {
+    color:  $dark;
+    background: $white;
+
+    @each $name, $bg, $cl in $color_map {
+        &-#{$name}{
+            @extend .bg;
+            background: $bg;
+            color: $cl ;
+        }
+    }
+}
+
+.bg-black{
+    color:  $light;
+    background: $black;
+} 
+
+.bg-dark{
+    color:  $white;
+    background: $dark;
+} 

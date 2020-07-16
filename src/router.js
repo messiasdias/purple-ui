@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from './components/pages/Home.vue'
 import Projects from './components/pages/Projects.vue'
+import Tasks from './components/pages/Tasks.vue'
 
 let Router  = {
     base: '/purple-ui/',
@@ -18,6 +19,12 @@ let Router  = {
             path: '/projects',
             alias: '/Projects',
             component: Projects
+        },
+        {
+            name: 'Tasks',
+            path: '/tasks',
+            alias: '/Tasks',
+            component: Tasks
         },
     ]
 }
