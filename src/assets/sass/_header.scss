@@ -9,6 +9,7 @@ header, .header {
 
     & > #left, & > #right{
         @extend .flex-row-center;
+        position: relative;
         width: 100%;
         ul{ list-style: none;}
         height: 80px;
@@ -31,38 +32,93 @@ header, .header {
 
         & > ul{ 
             @extend .flex-row-center;
+            position: relative;
+
             li{
+                position: relative;
                 margin: 5px 10px ;
                 padding: 5px;
-                a , a > i {
-                    color: $white ;
+
+
+                &:last-child{
+                    margin-right: 40px !important;
                 }
+
+                & >  a {
+                    position: relative;
+                    overflow: hidden !important;
+                    & , & > i {
+                        color: rgba($white, .9);
+                    }
+
+                    & > span[class^=tag]{
+                        position: absolute !important;
+                        top: -10px !important;
+                        right: -15px;
+                        width: 15px;
+                        height: 15px;
+                        font-size: 7px !important;
+                        text-overflow: none;
+                        overflow: hidden !important;
+                        white-space: nowrap;
+                        text-shadow: .1px .1px 1pc $black2;
+                    }
+
+                }
+
+                &:hover{
+                    & > a ,  & > a > svg , & > a > i{
+                       color: $white !important ;
+                   }
+               }
             }
+            
         }
 
         & > span{
             @extend .flex-row-center, .shadow;
             background: rgba( $secondary, .4) ;
             border-radius: 50px;
-            width: 130px;
+            min-width: 40px;
+            max-width: 130px;;
             height: 40px;
             padding: 0 !important;
             @media screen and (max-width: $lg) {  width: 40px;}
+            transition: all ease-in-out .1s;
 
             & > img{
-                border-radius: 100%;
-                width: 40px;
-                height: 40px;
+                @extend .avatar;
                 margin: 0 !important;
                 padding: 0;
+                animation: toRight ease-in-out .1s;
             }
 
             & > small{
-                color: $white;
+                & , & > a {
+                 color: $white !important;
+                }
                 font-size: 12px;
                 padding: 5px 10px;
                 font-weight: 400;
-                @media screen and (max-width: $lg) {display: none;}
+                opacity: 0;
+                display: none;
+                transition: all ease-in-out .1s  !important;
+            }
+
+            &:hover{
+                cursor: grabbing;
+                transition: all ease-in-out .1s;
+                width: 130px;
+
+                & > img{
+                    animation: scaling ease-in-out .1s;
+                }
+
+                & > small{ 
+                    transition: all ease-in-out .1s  !important;
+                    opacity: 1;
+                    display: inline-flex;
+                }
             }
         }
 

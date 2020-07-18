@@ -1,5 +1,5 @@
 <template>
-<section class="section" id="#home">
+<section class="section" >
     <div class="top">
         <h1>Moning, Heather!</h1>
         <p>Have a nice day!</p>
@@ -9,7 +9,7 @@
     <div class="row col-12">
         <div class="col-12 col-md-6 col-lg-8">
             <div class="card">
-                  
+                <Chart/>
             </div>
         </div>
 
@@ -69,7 +69,11 @@
 </section>   
 </template>
 <script>
+import Chart from './../Chart.vue'
 export default {
     name: 'Home',
+    components:{
+        Chart
+    }
 }
 </script>

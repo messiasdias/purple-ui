@@ -1,8 +1,9 @@
+import './assets'
 import Vue from 'vue'
 import App from './App.vue'
-import './assets/sass/purple-ui.scss'
-
-
+import router from './router'
+import meta from './meta'
 new Vue({
-  render: h => h(App),
+  router,
+  render: h => h(App,{props: meta}),
 }).$mount('#app')

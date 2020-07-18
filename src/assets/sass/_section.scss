@@ -1,13 +1,13 @@
 .section {
     @extend .flex-col-center;
     justify-content: flex-start !important;
-    min-height: 500px;
-    
+    align-items: center !important;
+    min-height: 500px  !important;
 
     .top{
-        padding: 20px;
-        width: 100%;
-        background-color: $primary;
+        padding: 20px !important;
+        width: 100% !important;
+        min-height: 60px !important;
 
         *{
             color:  $white;
@@ -15,13 +15,76 @@
 
         h1 {
             color: $white !important;
-            font-weight: 300;
-            font-size: 1.6em;
+            font-weight: 400;
+            font-size: 1.5em;
         }
 
         p{
             font-size: .8em;
             letter-spacing: .5px;
+        }
+
+        .left, .right{
+            @extend .col-12, .col-md-6;
+        }
+    
+        .left {
+            @extend .flex-row-center;
+            @media screen and (max-width: $md) {
+                justify-content: space-between;
+            }
+
+            @media screen and (min-width: $md) {
+                justify-content: flex-start;
+            }
+           
+
+            div{
+                @extend .flex-row-center;
+                justify-content: flex-start;
+                margin-left: 10px !important;
+            }
+
+            strong {
+                font-size: 24px;
+            }
+
+            small > b, small > a, strong{
+                color: $info;
+            }
+
+            small > a,  small > b, small, strong {
+                margin: 5px;
+            }
+
+        }
+        .right {
+            @extend .flex-row-center;
+            justify-content: flex-end;
+            @media screen and (max-width: $md) {
+                justify-content: space-between;
+            }
+
+            & > .nav{
+                @extend .flex-row-center;
+                @media screen and (min-width: $lg) {
+                    justify-content: flex-end !important;
+                    padding: 0px 20px;
+                }
+               
+                a{
+                    margin-right: 20px;
+                    font-size: 16px;
+
+                    @media screen and (min-width: $lg) {
+                        padding: 3px 5px;
+                    }
+
+                    svg, i{
+                        margin-right: 10px ;
+                    }
+                }
+            }
         }
     }
 
@@ -33,15 +96,17 @@
             padding: 0 !important;
 
             & > .card {
-                margin: 10px;
-                min-height: 200px !important;
-                padding: 0 ;
-                border: solid 1px rgba($primary, .1);
-                background-color: $light !important;
-            }
+                animation: scaling ease-in-out .3s;
+
+                &:hover{
+                    @extend .shadow-reverse;
+                 }
+            } 
         }
     }
-   
 
+    & > a[class^=btn]{
+        margin-top: 20px !important;
+    }
     
 }

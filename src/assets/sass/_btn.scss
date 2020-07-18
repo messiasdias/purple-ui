@@ -1,11 +1,4 @@
 
-$btn:
-default $light $dark,
-success $success $light,
-error $error $light,
-info $info $light,
-warning $warning $light;
-
 .btn {
     @extend .flex-row-center, .shadow;
     padding: 8px 20px;
@@ -34,7 +27,7 @@ warning $warning $light;
         transition: all ease-in-out .1s;
     }
 
-    @each $name , $bg, $cl in $btn {
+    @each $name , $bg, $cl in $color_map {
         &-#{$name} {
             @extend .btn;
             background: $bg !important;
@@ -50,4 +43,35 @@ warning $warning $light;
         }        
     }
 
+}
+
+
+.btn-circle {
+    @extend .btn, .circle, .flex-row-center;
+    padding: 0 !important;
+    min-width: 39px !important;
+    min-height: 39px !important;
+    max-width: 45px !important;
+    max-height: 45px !important;
+
+    & > svg, & >  i { 
+        margin: 0 !important; 
+        font-size: 13px !important;
+     }
+
+    @each $name , $bg, $cl in $color_map {
+        &-#{$name} {
+            @extend .btn-circle;
+            background: $bg !important;
+            color: $cl !important;
+
+            & > svg , & > i {
+                color: $cl !important;
+            }
+
+            &:hover{
+                background: rgba($bg, .9) !important;
+            }
+        }     
+    }  
 }

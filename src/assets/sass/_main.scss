@@ -4,29 +4,20 @@
     box-sizing: border-box !important;
 }
 
+html{
+    @extend .flex-row-center;
+}
+
 body {
+    box-sizing: border-box !important;
     background-color: $light;
     font-family: Nunito,Roboto, sans-serif;
     min-width: 250px !important;
-}
-
-a{
-    text-decoration: none !important;
-}
-
-
-#app, .app {
-    @extend .row;
-    box-sizing: border-box !important;
+    width: 100vw;
+    max-width: 100%;
     padding: 0 !important;
-    margin: 0 !important;
-    width: 100vw !important;
-    max-width:  calc( 100% /12 * 12) !important;   
-
-    &  > .col{
-        padding: 0 ;
-    }
-
+    overflow-x: hidden !important;
+    
 
     &::after{
         @extend .radius-left-bottom;
@@ -37,6 +28,25 @@ a{
         position: absolute;
         top: 0 !important;
         z-index: -1;
+    }
+}
+
+a{
+    text-decoration: none !important;
+}
+
+
+#app, .app {
+    @extend .row;
+    box-sizing: border-box !important;
+    padding: 0px !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 2048px !important;  
+    margin: 0  auto !important;
+
+    &  > .col{
+        padding: 0 ;
     }
 
 }//end .app

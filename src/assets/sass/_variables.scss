@@ -11,8 +11,6 @@ $lg: 992px;
 $xl: 1200px;
 
 //Colors
-$primary: #ccc ;
-$secondary: #ddd ;
 $primary: #6e00ff;
 $secondary: #510fa8;
 $gradient: linear-gradient( to top, $primary 1%, $secondary ); 
@@ -27,6 +25,10 @@ $error: #F85D5D;
 $info: #4799eb;
 $warning: #9e7700;
 
+////////////////////////////////
+//$primary: #009e73;
+//$secondary: rgba(#009e73, .5) ;
+
 $theme-colors: (
   "success":    $success,  
   "primary": $primary,
@@ -36,22 +38,24 @@ $theme-colors: (
   "warning": $warning,
 );  
 
+// @each $name , $bg, $cl in $color_map {}
 $color_map: 
-"default" $light $dark,
-"success" $success $white,
-"error" $error $white, 
-"warning" $warning $white, 
-"info" $info $white, 
-"primary" $primary $white; 
-
+default $light $dark,
+success $success $light,
+error $error $light, 
+warning $warning $light, 
+info $info $light, 
+primary $primary $light,
+secondary $secondary $light; 
 
 $color_map_dark: 
-"default" $dark $white,
-"success"$dark $white,
-"error" $dark $white, 
-"warning" $dark $white, 
-"info" $dark $white, 
-"primary" $dark $white; 
+default #eee $dark,
+success$dark $light,
+error $dark $light, 
+warning $dark $light, 
+info $dark $light, 
+primary $dark $light,
+secondary rgba($dark, .9) $light; 
 
 
 //Components
