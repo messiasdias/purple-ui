@@ -2,6 +2,7 @@
     @extend .flex-col-center;
     justify-content: flex-start !important;
     align-items: center !important;
+    min-height: 500px  !important;
 
     .top{
         padding: 20px !important;
@@ -96,6 +97,10 @@
 
             & > .card {
                 animation: scaling ease-in-out .3s;
+
+                &:hover{
+                    @extend .shadow-reverse;
+                 }
             } 
         }
     }

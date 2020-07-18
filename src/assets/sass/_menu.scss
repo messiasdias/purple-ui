@@ -15,9 +15,10 @@
     display: none;
 
     @media screen and (max-width: $lg) {
-        position: absolute;
+        box-shadow: none !important;
+        position: absolute !important;
         @media screen and  (max-width: $sm) {
-            top: 161px;
+            top: 91px;
         }
         top: 81px;
         width: 100%;
@@ -55,6 +56,7 @@
             position: relative !important;
             flex-direction: row;
             border-radius: none !important;
+            margin: 0 !important;
         }
     }
 
@@ -129,7 +131,7 @@
 
                 & > li {
                     z-index: 6 !important;
-                    padding: 5px !important;
+                    padding: 5px 0px !important;
 
                     a, svg, i{
                         color: $dark;
@@ -203,11 +205,12 @@
                 & > ul{display: none;}
 
                 .icon-group {
-                    @extend .card;
                     position: relative !important;
                     width: 100%;
                     padding: 0 !important;
                     z-index: 2 !important;
+                    background-color: $white;
+                    border-radius: 5px !important;
 
                     @media screen and (min-width: $lg) {
                         display: flex !important;
@@ -300,13 +303,20 @@
             width: 100% inherit;
             @extend .flex-row-center;
             display: flex !important;
+            flex-wrap: wrap !important;
             padding: 0 !important;
             border-top: solid 1px $black2;
             background-color: transparent;
             overflow: hidden;
 
+            @media screen and  (max-width: $md) {
+                min-width: 250px;
+                justify-content: flex-start;
+            }
+
             @media screen and (max-width: $lg) {
-                flex-direction: column;
+                border-radius: 5px;
+                margin-top: 20px;
             }
 
             @media screen and (min-width: $lg) {
@@ -316,21 +326,21 @@
             
             &  > li {
                 @extend .flex-row-center;
-                position: relative;
+                position: relative !important;
                 width: 100%;
                 width: 50% !important;
                 padding: 0 !important;
                 margin: 0 !important;
-                @media screen and  (max-width: $lg) {
+                @media screen and  (max-width: $md) {
                     min-width: 250px;
                 }
 
                 &  > a {
+                    position: relative !important;
                     width: 100%;
                     display: flex;
-                  
 
-                    @media screen and  (max-width: $lg) {
+                    @media screen and  (max-width: $md ) {
                         min-width: 250px;
                     }
 

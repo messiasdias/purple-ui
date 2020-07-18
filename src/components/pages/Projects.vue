@@ -36,7 +36,7 @@
 
     <div class="row col-12">
         
-        <div v-for="(card, id) in cards" :key="id" class="col-12 col-md-4">
+        <div v-for="(card, id) in cards" :key="id" class="col-12 col-md-4 col-lg-3">
             <div class="card projects" :id="'card'+id" >
                 <div class="card-header" >
                     <strong>{{card.date}}</strong>

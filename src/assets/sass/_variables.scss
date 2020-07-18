@@ -11,8 +11,6 @@ $lg: 992px;
 $xl: 1200px;
 
 //Colors
-$primary: #ccc ;
-$secondary: #ddd ;
 $primary: #6e00ff;
 $secondary: #510fa8;
 $gradient: linear-gradient( to top, $primary 1%, $secondary ); 
@@ -26,6 +24,10 @@ $success: #28a745;
 $error: #F85D5D;
 $info: #4799eb;
 $warning: #9e7700;
+
+////////////////////////////////
+//$primary: #009e73;
+//$secondary: rgba(#009e73, .5) ;
 
 $theme-colors: (
   "success":    $success,  

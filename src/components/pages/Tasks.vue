@@ -35,7 +35,7 @@
     </div>
 
     <div class="row">
-        <div class="card tasks">
+        <div class="col-12 card tasks">
                 <div class="card-header">
                     <strong>Tasks</strong>
                     <div class="actions">
