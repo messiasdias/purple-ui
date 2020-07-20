@@ -9,19 +9,19 @@
             <div class=""> 
                 <strong>25</strong>
                 <small>New tasks</small>
-                <small class="hide-under-md" ><a href="#">Kanban Board</a></small>
+                <small class="hide-under-md" ><a href="#/">Kanban Board</a></small>
             </div>
         </div>
 
         <div class="right">
 
             <div class="nav">
-                <a href="#">
+                <a href="#/">
                     <i class="fas fa-file-export"></i>
                     <small>Export</small>
                 </a>
 
-                <a href="#">
+                <a href="#/">
                     <i class="fas fa-cog"></i>
                     <small>Settings</small>
                 </a>
@@ -40,15 +40,15 @@
                 <div class="card-header">
                     <strong>Tasks</strong>
                     <div class="actions">
-                        <a href="#">
+                        <a href="#/">
                             <li class="fas fa-search"></li>
                         </a>
 
-                         <a href="#">
+                         <a href="#/">
                             <li class="fas fa-filter"></li>
                         </a>
 
-                         <a href="#">
+                         <a href="#/">
                             <li class="fas fa-ellipsis-h"></li>
                         </a>
                     </div>
@@ -66,16 +66,16 @@
                                 <a data-toggle="modal">Create the app's wireframe</a>
 
                                 <div class="actions">
-                                    <a href="#"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
+                                    <a href="#/"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
                                 </div>
                             </div>
 
                             <div class="right">
                                 
                                 <div class="actions">
-                                    <a href="#"> <i class="fas fa-check-circle"></i> <span class="tag-info">50%</span> </a>
-                                    <a href="#"> <i class="fas fa-file"></i> <span class="tag-info">3</span> </a>
-                                    <span> <img v-bind:src="avatar_f" alt=""> <small><a href="/">+3</a></small></span>
+                                    <a href="#/"> <i class="fas fa-check-circle"></i> <span class="tag-info">50%</span> </a>
+                                    <a href="#/"> <i class="fas fa-file"></i> <span class="tag-info">3</span> </a>
+                                    <span> <img v-bind:src="avatar_f" alt=""> <small><a href="#/">+3</a></small></span>
                                 </div>
     
                             </div>
@@ -90,16 +90,16 @@
                                 <a data-toggle="modal">Create Login and Register with Laravel</a>
 
                                 <div class="actions">
-                                    <a href="#"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
+                                    <a href="#/"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
                                 </div>
                             </div>
 
                             <div class="right">
                                 
                                 <div class="actions">
-                                    <a href="#"> <i class="fas fa-check-circle"></i> <span class="tag-info">30%</span> </a>
-                                    <a href="#"> <i class="fas fa-file"></i> <span class="tag-info">3</span> </a>
-                                    <span> <img v-bind:src="avatar_m" alt=""> <small><a href="/">+3</a></small></span>
+                                    <a href="#/"> <i class="fas fa-check-circle"></i> <span class="tag-info">30%</span> </a>
+                                    <a href="#/"> <i class="fas fa-file"></i> <span class="tag-info">3</span> </a>
+                                    <span> <img v-bind:src="avatar_m" alt=""> <small><a href="#/">+3</a></small></span>
                                 </div>
     
                             </div>
@@ -114,16 +114,16 @@
                                 <a data-toggle="modal">Finish the logo design</a>
 
                                 <div class="actions">
-                                    <a href="#"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
+                                    <a href="#/"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
                                 </div>
                             </div>
 
                             <div class="right">
                                 
                                 <div class="actions">
-                                    <a href="#"> <i class="fas fa-check-circle"></i> <span class="tag-info">90%</span> </a>
-                                    <a href="#"> <i class="fas fa-file"></i> <span class="tag-info">3</span> </a>
-                                    <span> <img v-bind:src="avatar_m3" alt=""> <small><a href="/">+3</a></small></span>
+                                    <a href="#/"> <i class="fas fa-check-circle"></i> <span class="tag-info">90%</span> </a>
+                                    <a href="#/"> <i class="fas fa-file"></i> <span class="tag-info">3</span> </a>
+                                    <span> <img v-bind:src="avatar_m3" alt=""> <small><a href="#/">+3</a></small></span>
                                 </div>
     
                             </div>
@@ -142,16 +142,16 @@
                                 <a data-toggle="modal">Setup the marketplace strategy</a>
 
                                 <div class="actions">
-                                    <a href="#"> <i class="fas fa-comment-alt"></i> <span class="tag-info">70%</span> </a>
+                                    <a href="#/"> <i class="fas fa-comment-alt"></i> <span class="tag-info">70%</span> </a>
                                 </div>
                             </div>
 
                             <div class="right">
                                 
                                 <div class="actions">
-                                    <a href="#"> <i class="fas fa-check-circle"></i> <span class="tag-info">3</span> </a>
-                                    <a href="#"> <i class="fas fa-file"></i> <span class="tag-info">3</span> </a>
-                                     <span> <img v-bind:src="avatar_f" alt=""> <small><a href="/">+3</a></small></span>
+                                    <a href="#/"> <i class="fas fa-check-circle"></i> <span class="tag-info">3</span> </a>
+                                    <a href="#/"> <i class="fas fa-file"></i> <span class="tag-info">3</span> </a>
+                                     <span> <img v-bind:src="avatar_f" alt=""> <small><a href="#/">+3</a></small></span>
                                 </div>
     
                             </div>
@@ -166,16 +166,16 @@
                                 <a data-toggle="modal">Create Login and Register with Laravel</a>
 
                                 <div class="actions">
-                                    <a href="#"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
+                                    <a href="#/"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
                                 </div>
                             </div>
 
                             <div class="right">
                                 
                                 <div class="actions">
-                                    <a href="#"> <i class="fas fa-check-circle"></i> <span class="tag-info">6</span> </a>
-                                    <a href="#"> <i class="fas fa-file"></i> <span class="tag-info">6</span> </a>
-                                    <span> <img v-bind:src="avatar_m" alt=""> <small><a href="/">+3</a></small></span>
+                                    <a href="#/"> <i class="fas fa-check-circle"></i> <span class="tag-info">6</span> </a>
+                                    <a href="#/"> <i class="fas fa-file"></i> <span class="tag-info">6</span> </a>
+                                    <span> <img v-bind:src="avatar_m" alt=""> <small><a href="#/">+3</a></small></span>
                                 </div>
     
                             </div>
@@ -190,15 +190,15 @@
                                 <a data-toggle="modal">Create Login and Register with Laravel</a>
 
                                 <div class="actions">
-                                    <a href="#"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
+                                    <a href="#/"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
                                 </div>
                             </div>
 
                             <div class="right">
                                 
                                 <div class="actions">
-                                    <a href="#"> <i class="fas fa-check-circle"></i> <span class="tag-info">6</span> </a>
-                                    <a href="#"> <i class="fas fa-file"></i> <span class="tag-info">6</span> </a>
+                                    <a href="#/"> <i class="fas fa-check-circle"></i> <span class="tag-info">6</span> </a>
+                                    <a href="#/"> <i class="fas fa-file"></i> <span class="tag-info">6</span> </a>
                                 </div>
     
                             </div>
@@ -217,15 +217,15 @@
                                 <a data-toggle="modal">Create the app's wireframe</a>
 
                                 <div class="actions">
-                                    <a href="#"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
+                                    <a href="#/"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
                                 </div>
                             </div>
 
                             <div class="right">
                                 
                                 <div class="actions">
-                                    <a href="#"> <i class="fas fa-check-circle"></i> <span class="tag-info">6</span> </a>
-                                    <a href="#"> <i class="fas fa-file"></i> <span class="tag-info">6</span> </a>
+                                    <a href="#/"> <i class="fas fa-check-circle"></i> <span class="tag-info">6</span> </a>
+                                    <a href="#/"> <i class="fas fa-file"></i> <span class="tag-info">6</span> </a>
                                 </div>
     
                             </div>
@@ -240,15 +240,15 @@
                                 <a data-toggle="modal">Create Login and Register with Laravel</a>
 
                                 <div class="actions">
-                                    <a href="#"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
+                                    <a href="#/"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
                                 </div>
                             </div>
 
                             <div class="right">
                                 
                                 <div class="actions">
-                                    <a href="#"> <i class="fas fa-check-circle"></i> <span class="tag-info">6</span> </a>
-                                    <a href="#"> <i class="fas fa-file"></i> <span class="tag-info">6</span> </a>
+                                    <a href="#/"> <i class="fas fa-check-circle"></i> <span class="tag-info">6</span> </a>
+                                    <a href="#/"> <i class="fas fa-file"></i> <span class="tag-info">6</span> </a>
                                 </div>
     
                             </div>
@@ -263,15 +263,15 @@
                                 <a data-toggle="modal">Create Login and Register with Laravel</a>
 
                                 <div class="actions">
-                                    <a href="#"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
+                                    <a href="#/"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
                                 </div>
                             </div>
 
                             <div class="right">
                                 
                                 <div class="actions">
-                                    <a href="#"> <i class="fas fa-check-circle"></i> <span class="tag-info">6</span> </a>
-                                    <a href="#"> <i class="fas fa-file"></i> <span class="tag-info">6</span> </a>
+                                    <a href="#/"> <i class="fas fa-check-circle"></i> <span class="tag-info">6</span> </a>
+                                    <a href="#/"> <i class="fas fa-file"></i> <span class="tag-info">6</span> </a>
                                 </div>
     
                             </div>

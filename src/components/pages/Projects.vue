@@ -9,19 +9,19 @@
             <div class=""> 
                 <strong>9</strong>
                 <small>Running projects</small>
-                <small class="hide-under-md" ><a href="#">See table</a></small>
+                <small class="hide-under-md" ><a href="#/">See table</a></small>
             </div>
         </div>
 
         <div class="right">
 
             <div class="nav">
-                <a href="#">
+                <a href="#/">
                     <i class="fas fa-file-export"></i>
                     <small>Export</small>
                 </a>
 
-                <a href="#">
+                <a href="#/">
                     <i class="fas fa-cog"></i>
                     <small>Settings</small>
                 </a>
@@ -41,11 +41,11 @@
                 <div class="card-header" >
                     <strong>{{card.date}}</strong>
                     <div class="actions">
-                        <a href="#">
+                        <a href="#/">
                             <li class="fas fa-sync"></li>
                         </a>
 
-                         <a href="#">
+                         <a href="#/">
                             <li class="fas fa-ellipsis-h"></li>
                         </a>
                     </div>
@@ -57,7 +57,7 @@
                       <small>UI/UX Developer</small>
                       
                       <div class="actions">
-                          <a v-if="i <= 2"  v-for="(cd, i) in cards" :key="i"  href="#"><img class="avatar-sm" :src="cd.img" alt="" /></a>
+                          <a v-if="i <= 2"  v-for="(cd, i) in cards" :key="i"  href="#/"><img class="avatar-sm" :src="cd.img" alt="" /></a>
                       </div>
                       <span :class="'badge-'+card.status.class">{{card.status.text}}</span>
                 </div> 
@@ -66,15 +66,15 @@
                 <div class="card-footer" >
                     
                     <div class="actions">
-                        <a href="#">
+                        <a href="#/">
                             <i class="fas fa-plus"></i>
                         </a>
 
-                         <a href="#">
+                         <a href="#/">
                             <i class="fas fa-comment"></i>
                         </a>
 
-                        <a class="tx-error" href="#">
+                        <a class="tx-error" href="#/">
                             <i class="fas fa-trash-alt"></i>
                         </a>
                     </div>
@@ -85,7 +85,7 @@
         </div>         
     </div>
 
-      <a class="btn" href="#">Load more ...</a>
+      <a class="btn" href="#/">Load more ...</a>
 </section>   
 </template>
 <script>

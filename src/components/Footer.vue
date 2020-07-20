@@ -15,9 +15,9 @@
 
             </li>
 
-            <li><a href="#">Support</a></li>
-            <li><a href="#">Terms</a></li>
-            <li><a href="#">Privacy</a></li>
+            <li><a href="#/">Support</a></li>
+            <li><a href="#/">Terms</a></li>
+            <li><a href="#/">Privacy</a></li>
         </ul>
     </div>
 </footer>
