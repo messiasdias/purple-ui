@@ -54,6 +54,9 @@
     @extend .flex-center, .flex-row;
 }
 
+.hide{
+    display: none;
+}
 
 .hide-under-xl{
     @media screen and (max-width: $xl) { display: none !important;}
@@ -95,7 +98,9 @@
 
 .tag {
     @extend .flex-row-center;
+    animation-delay: 2s !important;
     animation: jump ease-in-out .6s;
+    animation-iteration-count: 2;
     box-sizing: border-box !important;
     width: 20px;
     height: 20px;
@@ -167,6 +172,60 @@
         width: 120px !important;
         height: 120px !important;
     }
+}
+
+
+
+.avatar-badge {
+    @extend .flex-row-center, .shadow;
+    position: relative;
+    background: rgba( $secondary, .4) ;
+    border-radius: 50px;
+    max-width: 130px;;
+    height: 40px;
+    padding: 0 !important;
+    transition: all ease-in-out .1s;
+
+    & > img{
+        @extend .avatar;
+        margin: 0 !important;
+        padding: 0;
+        animation: toRight ease-in-out .1s;
+    }
+
+    & > small{
+        //position: absolute;
+        right: 0 !important;
+        & , & > a {
+         color: $white !important;
+        }
+        font-size: 12px;
+        padding: 5px;
+        font-weight: 400;
+        opacity: 0;
+        display: none;
+        transition: all ease-in-out .1s  !important;
+    }
+
+    &.active {
+        cursor: grabbing;
+        transition: all ease-in-out .1s;
+        min-width: 60px !important;
+
+        & > img{
+            animation: scaling ease-in-out .1s;
+            position: absolute;
+            left: 0 !important;
+        }
+
+        & > small{ 
+            transition: all ease-in-out .1s  !important;
+            opacity: 1;
+            display: inline-flex;
+            margin-left: 30px;
+        }
+    }
+
 }
 
 .tx {

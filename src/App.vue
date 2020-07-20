@@ -8,7 +8,7 @@
     </section>
     <!-- ./main -->
     <!-- footer -->
-    <Footer :description="description" />
+    <Footer @setLanguage="setLanguage($event)" :description="description" />
   </main>
 </template>
 
@@ -21,15 +21,52 @@ export default {
   name: 'App',
   props:{
     description: {
-          type: String,
-          default: 'PurpleUI'
+      type: String,
+      default: '                 '
     }
   },
   components: {
     Header,
     Sidebar,
     Footer
-  }
+  },
+  data(){
+    return {
+      language: null,
+      meta_info : {
+        title: this.$route.name,
+        titleTemplate:  '%s | '+this.description,
+        htmlAttrs: {
+          lang:  'pt-BR' ,
+          amp: true
+        },
+        meta: [
+          { charset: 'utf-8' },
+          {
+            'name': 'viewport',
+            'content': 'width=device-width,initial-scale=1'
+          },
+        ]
+      },
+    
+    }
+  }, 
+  methods:{
+    setLanguage(lang){
+      this.language = lang
+      this.meta_info.htmlAttrs.lang = lang.meta
+      this.$emit('setLanguage',lang)
+    }
+  },
+  metaInfo() { 
+    return this.meta_info
+  },
+  watch: {
+    $route (to, from) {
+      this.meta_info.title = this.$route.name
+    }
+} 
+  
 }
 </script>
 

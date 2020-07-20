@@ -1,3 +1,3 @@
 export default {
-    description: 'Purple UI - Messias Dias'
+    description: 'Purple UI'
 }

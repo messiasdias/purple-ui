@@ -9,8 +9,8 @@
     <div id="right">
         <ul>
             <li><a class="sidebartoggle" href="#"><i class="fas fa-stream"></i></a></li>
-            <!--<li><a href="#"><i class="fas fa-search"></i></a></li>-->
-            <li class="hide-on-lg"><a href="#"><i class="far fa-comment-alt"></i></a> <span id="tag" class="tag-info">6</span> </li>
+            <!--<li><a href="#"><i class="fas fa-search"></i></a></li>
+            <li class=""><a href="#"><i class="far fa-comment-alt"></i><span id="tag" class="tag-info">6</span></a>  </li> -->
             <li><a href="#"><i class="far fa-bell"></i> <span class="tag-info">90</span> </a></li>
         </ul>
         <span> <img v-bind:src="avatar" alt=""> <small><a href="/">Jhon Snow</a></small></span>
