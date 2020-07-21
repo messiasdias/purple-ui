@@ -8,5 +8,5 @@ import meta from './meta'
 Vue.use(VueMeta, {refreshOnceOnNavigation: true})
 new Vue({
   router,
-  render: h => h(App,{props: meta}),
+  render: h => h(App,{props: meta})
 }).$mount('#app')

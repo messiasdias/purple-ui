@@ -75,11 +75,11 @@ footer {
                     padding: 20px 10px;
                     overflow: visible !important;
                     z-index: 2;
-                    animation: toTop ease-in-out .1s;                      
+                    animation: toTop ease-in-out .1s;
+                    background: $white !important;                      
 
                     li{
                         transition-delay: 2s !important;
-                        //animation: toBottom ease-in-out .3s;
                         @extend .flex-row-center;
                         img{
                             margin-right: 10px;
@@ -90,7 +90,7 @@ footer {
                         content: '';
                         width: 40px;
                         height: 40px;
-                        background-color: $light;
+                        background: $white !important;                      
                         position: absolute;
                         bottom: -5px;
                         left: calc(50%/2 + 20px );

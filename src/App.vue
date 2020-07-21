@@ -65,7 +65,14 @@ export default {
     $route (to, from) {
       this.meta_info.title = this.$route.name
     }
-} 
+  },
+  mounted(){
+    setTimeout(()=> {
+      if(  document.getElementsByClassName('preloader').length >= 1 ){
+       document.getElementsByClassName('preloader')[0].style.display = 'none' 
+      }
+    }, 1000)
+  } 
   
 }
 </script>

@@ -8,6 +8,7 @@
     padding: 0 ;
     margin: 10px;
     background-color: $light !important;
+    user-select: none;
 
     .actions {
         @extend .flex-row-center;
@@ -75,7 +76,7 @@
     &-inline {
         @extend .flex-col-center;
         position: relative !important;
-        border: solid 1px $black2;
+        border: solid 2px $black2;
         border-radius: 10px;
         min-height: 60px;
         width: 100%;
@@ -89,19 +90,24 @@
         @each $name , $bg, $cl in $color_map  {
             &-#{$name}  {
                 @extend .card-inline;
+                border: solid 2px rgba($bg , .2) ;
                 & > span, & > .line {
                     background: $bg !important;
+                }
+
+                &:hover{
+                    border: solid 2px rgba($bg , .4) ;
                 }
             }
         }
 
-        & > span, & > .line, & > .topline{
+        & > span, & > .line {
             max-width:  calc( 100%  - 10px);
             width: 100%;
             background: $dark;
             height: 4px;
             position: absolute;
-            top: 5px;
+            bottom: 5px;
             left: 5px;
             border-radius: 10px;
             transition-delay: .3s;
@@ -234,7 +240,7 @@
             .card-inline{
                 &:hover{
                     cursor: grab;
-                    @extend .shadow;
+                    @extend .shadow2;
                 }
             }
         }

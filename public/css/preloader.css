@@ -1,32 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
-
-@keyframes preloader1 {
-  0% {opacity: 1;}
-  100%{opacity: 0;}
+/* Variables */
+:root{
+  --primary: #6e00ff;
+  --preloader_span: 80px;
+  --preloader_span-30p100: calc( var(--preloader_span) - ((var(--preloader_span)/100) * 30) )
 }
 
-@keyframes preloader2 {
-  0% {opacity: 0  }
-  20% {opacity: 1 }
+
+@keyframes before_after_loader {
+  0% { 
+    transform: translateX(0px) translateY(-50px);
+    opacity: 1;
+  }
+
+  12.25% { 
+    transform: translateX(30px) translateY(-30px);
+  }
+
+  24.50% { 
+    transform: translateX(50px) translateY(0px);
+  }
+
+  37%{
+    transform: translateX(30px) translateY(30px);
+  }
+
+  49.25%{
+    transform: translateX(0px) translateY(50px);
+  }
+  
+  61.50%{
+    transform: translateX(-30px) translateY(30px);
+  }
+
+  73.75%{
+    transform: translateX(-50px) translateY(0px);
+  }
+
+  86%{
+    transform: translateX(-30px) translateY(-30px);
+  }
+
+  98.25% { 
+    transform: translateX(0px) translateY(-50px);
+    opacity: 1;
+  }
+
 }
 
-@keyframes preloader3 {
-  0% {opacity: 0 }
-  30% {opacity: 1 }
-}
 
 .preloader{
-  background-color: #6e00ff;
+  background-color: var(--primary);
   width: 100vw;
   height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  transition: all ease-in-out 2s !important;
 }
 
 .preloader h1{
@@ -41,34 +76,38 @@
 }
 
 .preloader span {
-  width: 18px;
-  height: 18px;
-  background: white;
+  width: 80px;
+  height: 80px;
+  background: transparent;
   border-radius: 100%;
   margin-top: 20px;
-  position: relative;
+  position: relative !important;
   transition-delay: 3s;
-  animation: preloader1 cubic-bezier(0.6, 0.28, 0.735, 0.045) 1s infinite ; 
-  transform: translateX(-40px);
-  opacity: 0;
+  border: dotted 2px rgba(255,255,255, .4) !important;
+  opacity: 1;
 }
 
 .preloader span:before, .preloader span:after {
   content: '';
-  width: 100%;
-  height: 100%;
+  width: 18px;
+  height: 18px;
   position: absolute;
   border-radius: inherit;
   background: white;
+  opacity: 0;
+  left: calc(50% - (18px/2) );
+  top: calc(50% - (18px/2) ) ;
+  animation-name: before_after_loader;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 
 
 .preloader span:before {
-  left: 150%;
-  animation: preloader2 cubic-bezier(0.6, 0.28, 0.735, 0.045) 1s infinite ; 
+  animation-duration: 1s ;
 }
 
 .preloader span:after {
-  left: 300%;
-  animation: preloader3 cubic-bezier(0.6, 0.28, 0.735, 0.045) 1s infinite;
+  transition-delay: 1s;
+  animation-duration: 2s;
 }

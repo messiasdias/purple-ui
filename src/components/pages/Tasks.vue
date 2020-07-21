@@ -9,19 +9,19 @@
             <div class=""> 
                 <strong>25</strong>
                 <small>New tasks</small>
-                <small class="hide-under-md" ><a href="#/">Kanban Board</a></small>
+                <small class="hide-under-md" ><a href="#">Kanban Board</a></small>
             </div>
         </div>
 
         <div class="right">
 
             <div class="nav">
-                <a href="#/">
+                <a href="#">
                     <i class="fas fa-file-export"></i>
                     <small>Export</small>
                 </a>
 
-                <a href="#/">
+                <a href="#">
                     <i class="fas fa-cog"></i>
                     <small>Settings</small>
                 </a>
@@ -40,15 +40,15 @@
                 <div class="card-header">
                     <strong>Tasks</strong>
                     <div class="actions">
-                        <a href="#/">
+                        <a href="#">
                             <li class="fas fa-search"></li>
                         </a>
 
-                         <a href="#/">
+                         <a href="#">
                             <li class="fas fa-filter"></li>
                         </a>
 
-                         <a href="#/">
+                         <a href="#">
                             <li class="fas fa-ellipsis-h"></li>
                         </a>
                     </div>
@@ -66,16 +66,16 @@
                                 <a data-toggle="modal">Create the app's wireframe</a>
 
                                 <div class="actions">
-                                    <a href="#/"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
+                                    <a href="#"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
                                 </div>
                             </div>
 
                             <div class="right">
                                 
                                 <div class="actions">
-                                    <a href="#/"> <i class="fas fa-check-circle"></i> <span class="tag-info">50%</span> </a>
-                                    <a href="#/"> <i class="fas fa-file"></i> <span class="tag-info">3</span> </a>
-                                    <span> <img v-bind:src="avatar_f" alt=""> <small><a href="#/">+3</a></small></span>
+                                    <a href="#"> <i class="fas fa-check-circle"></i> <span class="tag-info">50%</span> </a>
+                                    <a href="#"> <i class="fas fa-file"></i> <span class="tag-info">3</span> </a>
+                                    <span> <img v-bind:src="avatar_f" alt=""> <small><a href="#">+3</a></small></span>
                                 </div>
     
                             </div>
@@ -90,16 +90,16 @@
                                 <a data-toggle="modal">Create Login and Register with Laravel</a>
 
                                 <div class="actions">
-                                    <a href="#/"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
+                                    <a href="#"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
                                 </div>
                             </div>
 
                             <div class="right">
                                 
                                 <div class="actions">
-                                    <a href="#/"> <i class="fas fa-check-circle"></i> <span class="tag-info">30%</span> </a>
-                                    <a href="#/"> <i class="fas fa-file"></i> <span class="tag-info">3</span> </a>
-                                    <span> <img v-bind:src="avatar_m" alt=""> <small><a href="#/">+3</a></small></span>
+                                    <a href="#"> <i class="fas fa-check-circle"></i> <span class="tag-info">30%</span> </a>
+                                    <a href="#"> <i class="fas fa-file"></i> <span class="tag-info">3</span> </a>
+                                    <span> <img v-bind:src="avatar_m" alt=""> <small><a href="#">+3</a></small></span>
                                 </div>
     
                             </div>
@@ -114,16 +114,16 @@
                                 <a data-toggle="modal">Finish the logo design</a>
 
                                 <div class="actions">
-                                    <a href="#/"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
+                                    <a href="#"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
                                 </div>
                             </div>
 
                             <div class="right">
                                 
                                 <div class="actions">
-                                    <a href="#/"> <i class="fas fa-check-circle"></i> <span class="tag-info">90%</span> </a>
-                                    <a href="#/"> <i class="fas fa-file"></i> <span class="tag-info">3</span> </a>
-                                    <span> <img v-bind:src="avatar_m3" alt=""> <small><a href="#/">+3</a></small></span>
+                                    <a href="#"> <i class="fas fa-check-circle"></i> <span class="tag-info">90%</span> </a>
+                                    <a href="#"> <i class="fas fa-file"></i> <span class="tag-info">3</span> </a>
+                                    <span> <img v-bind:src="avatar_m3" alt=""> <small><a href="#">+3</a></small></span>
                                 </div>
     
                             </div>
@@ -135,23 +135,47 @@
                      <div class="container-fluid">
                         <h3 class="">Market</h3>
                         
-                        <div class="card-inline-error"> 
+                        <div class="card-inline-info"> 
                             <span class="line"  style="width: 70%;"  ></span>
                         
                             <div class="left">
                                 <a data-toggle="modal">Setup the marketplace strategy</a>
 
                                 <div class="actions">
-                                    <a href="#/"> <i class="fas fa-comment-alt"></i> <span class="tag-info">70%</span> </a>
+                                    <a href="#"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
                                 </div>
                             </div>
 
                             <div class="right">
                                 
                                 <div class="actions">
-                                    <a href="#/"> <i class="fas fa-check-circle"></i> <span class="tag-info">3</span> </a>
-                                    <a href="#/"> <i class="fas fa-file"></i> <span class="tag-info">3</span> </a>
-                                     <span> <img v-bind:src="avatar_f" alt=""> <small><a href="#/">+3</a></small></span>
+                                    <a href="#"> <i class="fas fa-check-circle"></i> <span class="tag-info">3</span> </a>
+                                    <a href="#"> <i class="fas fa-file"></i> <span class="tag-info">3</span> </a>
+                                     <span> <img v-bind:src="avatar_f" alt=""> <small><a href="#">+3</a></small></span>
+                                </div>
+    
+                            </div>
+                                
+                        </div>
+
+
+                        <div class="card-inline-error"> 
+                            <span class="line"  style="width: 10%;"  ></span>
+                        
+                            <div class="left">
+                                <a data-toggle="modal">Create the Facebook campaign setup </a>
+
+                                <div class="actions">
+                                    <a href="#"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
+                                </div>
+                            </div>
+
+                            <div class="right">
+                                
+                                <div class="actions">
+                                    <a href="#"> <i class="fas fa-check-circle"></i> <span class="tag-info">10%</span> </a>
+                                    <a href="#"> <i class="fas fa-file"></i> <span class="tag-info">3</span> </a>
+                                    <span> <img v-bind:src="avatar_f2" alt=""> <small><a href="#">+3</a></small></span>
                                 </div>
     
                             </div>
@@ -160,45 +184,22 @@
 
 
                         <div class="card-inline-info"> 
-                            <span class="line"  style="width: 54%;"  ></span>
+                            <span class="line"  style="width: 70%;"  ></span>
                         
                             <div class="left">
-                                <a data-toggle="modal">Create Login and Register with Laravel</a>
+                                <a data-toggle="modal">Compose newsletter for the big launch</a>
 
                                 <div class="actions">
-                                    <a href="#/"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
+                                    <a href="#"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
                                 </div>
                             </div>
 
                             <div class="right">
                                 
                                 <div class="actions">
-                                    <a href="#/"> <i class="fas fa-check-circle"></i> <span class="tag-info">6</span> </a>
-                                    <a href="#/"> <i class="fas fa-file"></i> <span class="tag-info">6</span> </a>
-                                    <span> <img v-bind:src="avatar_m" alt=""> <small><a href="#/">+3</a></small></span>
-                                </div>
-    
-                            </div>
-                                
-                        </div>
-
-
-                        <div class="card-inline-success"> 
-                            <span class="line"  style="width: 86%;"  ></span>
-                        
-                            <div class="left">
-                                <a data-toggle="modal">Create Login and Register with Laravel</a>
-
-                                <div class="actions">
-                                    <a href="#/"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
-                                </div>
-                            </div>
-
-                            <div class="right">
-                                
-                                <div class="actions">
-                                    <a href="#/"> <i class="fas fa-check-circle"></i> <span class="tag-info">6</span> </a>
-                                    <a href="#/"> <i class="fas fa-file"></i> <span class="tag-info">6</span> </a>
+                                    <a href="#"> <i class="fas fa-check-circle"></i> <span class="tag-info">70%</span> </a>
+                                    <a href="#"> <i class="fas fa-file"></i> <span class="tag-info">3</span> </a>
+                                     <span> <img v-bind:src="avatar_m" alt=""> <small><a href="#">+3</a></small></span>
                                 </div>
     
                             </div>
@@ -210,73 +211,77 @@
                      <div class="container-fluid">
                         <h3 class="">Branding</h3>
                         
-                        <div class="card-inline-error"> 
-                            <span class="line"  style="width: 25%;"  ></span>
-                        
-                            <div class="left">
-                                <a data-toggle="modal">Create the app's wireframe</a>
-
-                                <div class="actions">
-                                    <a href="#/"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
-                                </div>
-                            </div>
-
-                            <div class="right">
-                                
-                                <div class="actions">
-                                    <a href="#/"> <i class="fas fa-check-circle"></i> <span class="tag-info">6</span> </a>
-                                    <a href="#/"> <i class="fas fa-file"></i> <span class="tag-info">6</span> </a>
-                                </div>
-    
-                            </div>
-                                
-                        </div>
-
-
-                        <div class="card-inline-error"> 
-                            <span class="line"  style="width: 54%;"  ></span>
-                        
-                            <div class="left">
-                                <a data-toggle="modal">Create Login and Register with Laravel</a>
-
-                                <div class="actions">
-                                    <a href="#/"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
-                                </div>
-                            </div>
-
-                            <div class="right">
-                                
-                                <div class="actions">
-                                    <a href="#/"> <i class="fas fa-check-circle"></i> <span class="tag-info">6</span> </a>
-                                    <a href="#/"> <i class="fas fa-file"></i> <span class="tag-info">6</span> </a>
-                                </div>
-    
-                            </div>
-                                
-                        </div>
-
-
                         <div class="card-inline-success"> 
-                            <span class="line"  style="width: 86%;"  ></span>
+                            <span class="line"  style="width: 70%;"  ></span>
                         
                             <div class="left">
-                                <a data-toggle="modal">Create Login and Register with Laravel</a>
+                                <a data-toggle="modal">Call with Dave</a>
 
                                 <div class="actions">
-                                    <a href="#/"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
+                                    <a href="#"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
                                 </div>
                             </div>
 
                             <div class="right">
                                 
                                 <div class="actions">
-                                    <a href="#/"> <i class="fas fa-check-circle"></i> <span class="tag-info">6</span> </a>
-                                    <a href="#/"> <i class="fas fa-file"></i> <span class="tag-info">6</span> </a>
+                                    <a href="#"> <i class="fas fa-check-circle"></i> <span class="tag-info">70%</span> </a>
+                                    <a href="#"> <i class="fas fa-file"></i> <span class="tag-info">3</span> </a>
+                                     <span> <img v-bind:src="avatar_m" alt=""> <small><a href="#">+3</a></small></span>
                                 </div>
     
                             </div>
                                 
                         </div>
+
+
+                        <div class="card-inline-warning"> 
+                            <span class="line"  style="width: 70%;"  ></span>
+                        
+                            <div class="left">
+                                <a data-toggle="modal">Lunch meeting </a>
+
+                                <div class="actions">
+                                    <a href="#"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
+                                </div>
+                            </div>
+
+                            <div class="right">
+                                
+                                <div class="actions">
+                                    <a href="#"> <i class="fas fa-check-circle"></i> <span class="tag-info">70%</span> </a>
+                                    <a href="#"> <i class="fas fa-file"></i> <span class="tag-info">3</span> </a>
+                                    <span> <img v-bind:src="avatar_f" alt=""> <small><a href="#">+3</a></small></span>
+                                </div>
+    
+                            </div>
+                                
+                        </div>
+
+
+                        <div class="card-inline-info"> 
+                            <span class="line"  style="width: 70%;"  ></span>
+                        
+                            <div class="left">
+                                <a data-toggle="modal">Purple UI website redesign</a>
+
+                                <div class="actions">
+                                    <a href="#"> <i class="fas fa-comment-alt"></i> <span class="tag-info">6</span> </a>
+                                </div>
+                            </div>
+
+                            <div class="right">
+                                
+                                <div class="actions">
+                                    <a href="#"> <i class="fas fa-check-circle"></i> <span class="tag-info">70%</span> </a>
+                                    <a href="#"> <i class="fas fa-file"></i> <span class="tag-info">3</span> </a>
+                                     <span> <img v-bind:src="avatar_m" alt=""> <small><a href="#">+3</a></small></span>
+                                </div>
+    
+                            </div>
+                                
+                        </div>
+
                     </div>     
 
 

@@ -7,8 +7,14 @@
 }
 
 
+.shadow2 {
+    box-shadow: 2px 2px 15px  rgba( $black , .05), -2px 12px 15px rgba($black,.005);
+}
+
+
+
 .shadow-reverse {
-    box-shadow: 2px 2px 15px  rgba( $black , .2), -2px 12px 15px rgba($black,.1);
+    box-shadow: 2px 2px 15px  rgba( $black , .05), -2px 12px 15px rgba($black,.1);
 }
 
 .shadow-radius{
