@@ -3,7 +3,7 @@
 
     <li class="hide-on-lg separator"><a href="#">Overview</a></li>
      
-    <li><a href="/">Home</a></li>
+    <li><a href="#/">Home</a></li>
 
     <li class="dropdown-menu">
                 

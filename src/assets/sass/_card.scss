@@ -1,14 +1,14 @@
 .card {
     @extend .shadow-radius;
-    //padding: 10px;
     background-color: $white !important;
     min-width: 150px;
+    min-height: 200px ;
     position: relative;
     overflow: hidden;
     padding: 0 ;
     margin: 10px;
-    min-height: 200px !important;
     background-color: $light !important;
+    user-select: none;
 
     .actions {
         @extend .flex-row-center;
@@ -28,7 +28,7 @@
         @each $name , $color, $cl in $color_map {
             a.#{name}{
                 &  > svg, & {
-                    color: $color !important;
+                    color: $color;
                 }
             }
         }
@@ -54,6 +54,14 @@
         @extend .flex-col-center;
         min-height: 80px;
         padding: 28px 10px;
+
+        div[class^=container]{
+            margin-bottom: 20px;
+            h1,h2,h3{
+                margin-bottom: 10px;
+                font-weight: 600;
+            }
+        }
     }
 
 
@@ -63,11 +71,118 @@
         padding: 10px 0px !important;
     }
 
-    &:hover{
-       //@extend .shadow-reverse;
+
+    //.card-inline
+    &-inline {
+        @extend .flex-col-center;
+        position: relative !important;
+        border: solid 2px $black2;
+        border-radius: 10px;
+        min-height: 60px;
+        width: 100%;
+        padding: 20px 0px;
+        margin-bottom: 10px;
+
+        @media screen and (min-width: $lg) {
+            flex-direction: row !important;
+        }
+
+        @each $name , $bg, $cl in $color_map  {
+            &-#{$name}  {
+                @extend .card-inline;
+                border: solid 2px rgba($bg , .2) ;
+                & > span, & > .line {
+                    background: $bg !important;
+                }
+
+                &:hover{
+                    border: solid 2px rgba($bg , .4) ;
+                }
+            }
+        }
+
+        & > span, & > .line {
+            max-width:  calc( 100%  - 10px);
+            width: 100%;
+            background: $dark;
+            height: 4px;
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            border-radius: 10px;
+            transition-delay: .3s;
+            transition: width ease-in-out .8s ;
+            animation: elastic ease-in-out .8s alternate;
+            animation-iteration-count: 1;
+            animation-delay: .1s;
+        }
+
+        .left, .right {
+            @extend .col-12, .col-lg-6, .flex-row-center;
+            justify-content: flex-start !important;
+            flex-wrap: wrap !important;
+
+            .actions {
+                @extend .flex-row-center;
+
+                &  > a {
+                    color: $dark;
+                    text-align: left !important;
+                    &:hover{
+                        color: rgba($dark, .7);
+                    }
+
+                    & > span[class^=tag]{
+                        background: none !important;
+                        color: $dark !important;
+                        margin-left: 7px;
+                        animation: none !important;
+                    }
+                }
+
+                &  > span {
+                    @extend .avatar-badge, .active;
+                    background: rgba($dark, .5) !important;
+                    box-shadow: none !important;
+                    small > a {color: $dark !important;}
+                }
+            }
+        }
+
+        .left{
+            justify-content: flex-start !important;
+            @media screen and (max-width: $lg) {
+                justify-content: space-between !important;
+            }
+
+            a{
+                text-decoration: none;
+                font-weight: bolder;
+                font-size: 1rem;
+
+                &:hover{
+                    color: $primary;
+                    cursor: pointer;
+                }
+            }
+
+            .actions {
+                margin-left: 20px;
+                @media screen and (max-width: $lg) {margin: 0 !important;}
+            }
+        }
+
+        .right{
+            @media screen and (min-width: $lg) {
+                justify-content: flex-end !important;
+            }
+
+            .actions {
+               // margin-left: 20px;
+            }
+        }
+
     }
-
-
 
     &.projects {
         .card-header{
@@ -114,14 +229,20 @@
     
     &.tasks {
         position: relative;
-        width: 100% !important;
+
         .card-header{
             border-color: $black2;
         }
 
         .card-body {
-            @extend .flex-col-center;
-            justify-content: flex-start !important;
+            align-items: flex-start !important;
+
+            .card-inline{
+                &:hover{
+                    cursor: grab;
+                    @extend .shadow2;
+                }
+            }
         }
     
         .card-footer{
@@ -129,11 +250,4 @@
         }
     }
 
-}
-
-
-.card2 {
-    border: solid 1px $black2;
-    border-radius: 10px;
-    min-height: 80px;
 }

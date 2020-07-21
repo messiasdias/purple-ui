@@ -75,50 +75,13 @@ header, .header {
             
         }
 
-        & > span{
-            @extend .flex-row-center, .shadow;
-            background: rgba( $secondary, .4) ;
-            border-radius: 50px;
-            min-width: 40px;
-            max-width: 130px;;
-            height: 40px;
-            padding: 0 !important;
+        & > span {
+            @extend .avatar-badge ;
             @media screen and (max-width: $lg) {  width: 40px;}
-            transition: all ease-in-out .1s;
-
-            & > img{
-                @extend .avatar;
-                margin: 0 !important;
-                padding: 0;
-                animation: toRight ease-in-out .1s;
-            }
-
-            & > small{
-                & , & > a {
-                 color: $white !important;
-                }
-                font-size: 12px;
-                padding: 5px 10px;
-                font-weight: 400;
-                opacity: 0;
-                display: none;
-                transition: all ease-in-out .1s  !important;
-            }
 
             &:hover{
-                cursor: grabbing;
-                transition: all ease-in-out .1s;
+                @extend .active;
                 width: 130px;
-
-                & > img{
-                    animation: scaling ease-in-out .1s;
-                }
-
-                & > small{ 
-                    transition: all ease-in-out .1s  !important;
-                    opacity: 1;
-                    display: inline-flex;
-                }
             }
         }
 

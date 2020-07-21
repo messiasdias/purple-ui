@@ -1,6 +1,6 @@
 <template>
      <div>
-        <VueApexCharts type="area" height="350" :options="chartOptions" :series="series"></VueApexCharts>
+        <!--<VueApexCharts type="area" height="350" :options="chartOptions" :series="series"></VueApexCharts>-->
      </div>
 </template>
 <script>

@@ -12,12 +12,17 @@ var breakpoints = {
 
 $(document).ready(()=> {
     
-    $(this).click((event) => {
-        if($('#drowpcard').css('display') === 'block') $('#drowpcard').hide();
+    $(document).click((event) => {
+      
         if( event.target.parentElement.nodeName.toLowerCase() !== 'li' && (dropdown_menu !== null | dropdown_submenu !== null) ){
             dropdown_menu_active() 
             dropdown_submenu_active()
         }
+
+        if( !$(event.target).hasClass('modal') | !$(event.target.parentElement).hasClass('modal') ){
+            $('.modal').hide()
+        }
+        
     })
 
     $('.menutoggle').click((event) => {

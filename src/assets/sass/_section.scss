@@ -51,6 +51,7 @@
 
             small > b, small > a, strong{
                 color: $info;
+                animation: toBottom ease-in-out .3s;
             }
 
             small > a,  small > b, small, strong {
@@ -89,9 +90,10 @@
     }
 
     .row {
+        @extend .col-12;
         padding: 0 !important;
 
-        & > div[class^=col-] {
+        & > div[class^=col] {
             margin:  0 !important;
             padding: 0 !important;
 

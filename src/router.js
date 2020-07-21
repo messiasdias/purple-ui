@@ -6,7 +6,7 @@ import Tasks from './components/pages/Tasks.vue'
 
 let Router  = {
     base: '/purple-ui/',
-    mode: 'history',
+    mode: 'hash',
     routes: [
         {
             name: 'Home',

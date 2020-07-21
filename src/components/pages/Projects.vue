@@ -34,7 +34,7 @@
 
     </div>
 
-    <div class="row col-12">
+    <div class="row">
         
         <div v-for="(card, id) in cards" :key="id" class="col-12 col-md-4 col-lg-3">
             <div class="card projects" :id="'card'+id" >
